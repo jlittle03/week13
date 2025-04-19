@@ -21,6 +21,7 @@
   "homepage": "https://github.com/jlittle03/week13#readme",
   "description": "",
   "devDependencies": {
+    "css-loader": "^7.1.2",
     "gh-pages": "^6.3.0",
     "html-webpack-plugin": "^5.6.3",
     "sass": "^1.86.3",

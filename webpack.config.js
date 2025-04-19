@@ -19,7 +19,7 @@ module.exports = {
     },
     {
       test: 
-      /\.(s(ac)ss)$/i,
+      /\.(sass)$/i,
       use: ["sass-loader"]
    }
   ],

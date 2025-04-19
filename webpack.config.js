@@ -1,10 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
-var ghpages = require('gh-pages');
-
-ghpages.publish('dist', function(err) {});
-
 module.exports = {
   mode: "development",
   entry: "./src/index.js",
@@ -12,6 +8,20 @@ module.exports = {
     filename: "bundle.js",
     path: path.resolve(__dirname, "dist"),
     clean: true,
+  },
+  rules: [
+    {
+        test: /\.tsx?$/,
+        use: 'ts-loader',
+        exclude: /node_modules/,
+    },
+    {
+        test: /\.s[ac]ss$/,
+        use: ["sass-loader"],
+    },
+  ],
+  resolve: {
+    extensions: ['.tsx', '.ts', '.js'],
   },
     plugins: [
     new HtmlWebpackPlugin({
